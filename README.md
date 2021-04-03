@@ -4,3 +4,5 @@
 
 Binomial and Trinomial tree implementations of the acclaimed CRR model. Comparison to the Black-Scholes equation is included to see how the tree method performs relative to a
 closed-form solution.
+
+Pricing: European calls/puts, American calls/puts, barrier options. 
