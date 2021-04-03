@@ -7,63 +7,14 @@ Original file is located at
     https://colab.research.google.com/drive/1udOkKyUnydNtUbOvecyr_7Do7H-7YHkJ
 """
 
-# Load the Drive helper and mount
-from google.colab import drive
+###################################################################
+# COX-ROSS-RUBENSTEIN (CRR) Binomial Tree Implementation 
+###################################################################
 
-from google.colab import drive
-drive.mount('/content/drive')
+# Author      : Will Carpenter 
+# Date Created: April 1st, 2021  
 
-"""# New Section
-
-# **The Cox-Ross-Rubenstein Binomial Model**
-
-## Overview
-
-See the document "Cox_Ross_Rubenstein.pdf" for a detailed discussion of the model, which includes derivations.
-
-Parameters of the model involve having a probability $p$ and movements $u$ and $d$ for change in the value of the asset as it moves up and down within the tree model. 
-
-<center>
-$ u = e^{\sigma \sqrt{\Delta}}$
-
-$ d = e^{-\sigma \sqrt{\Delta}} $
-
-$ p = \frac{e^{r\Delta} - d}{u - d}$
-</center>
-
-
-With these three formulas, we can construct a CRR binomial tree building program that takes as input the following arguments:
-
-
-## Volatility $\sigma$
-
-Annualized Volatility can be estimated from historical time series data 
-on a particular stock or inferred from prevailing derivative prices. 
-
-Using historical data, denote the daily log-return of an equity: 
-
-<center>
-$\tilde{g}_t = ln\left( \frac{S_t}{S_{t-1}} \right)$
-</center>
-
-Find the standard deviation of log-returns over $n$ days to generate an estimate of daily volatility:
-
-<center>
-$\bar{\sigma} = \sqrt{\frac{1}{n-1}(\tilde{g}_t - \mathbb{E}[\tilde{g}])^2}$ 
-</center>
-
-The bar for $\bar{\sigma}$ is used to denote a *daily* volatility. Inputs into the CRR model (and Black-Scholes for that matter) require volatility to be annualized. There are many different conventions for annualizing a daily volatility based on days in the year. The NYSE officially states that a year contains 253 trading days so that value is used:
-
-<center>
-$\sigma = \bar{\sigma} * \sqrt{253}$
-</center>
-
-## Riskless Interest Rate $r$
-
-Use the continously compounded yield on a T-bill with the nearest maturity.
-"""
-
-import math
+import math 
 import numpy as np
 
 def crr_tree(s, k, r, T, t, v):
@@ -75,16 +26,14 @@ def crr_tree(s, k, r, T, t, v):
     # t : steps 
     # v  : annualized volatility
 
-    # Tree is created as a two dimentional array 
-    # Fill in tree accordingly 
-
     # Calculate time increment 
     dt = T / t 
-    # Initialize tree
-
-    # should be equal to (t, t)  
+    # Initialize tree  
+    crrTree      = np.empty((t,t)) 
+    crrPrice     = np.empty((t,t))
+    crrTree[:]   = np.nan
+    crrPrice[:]  = np.nan
     
-    crrTree = np.zeros((t, t)) 
     crrTree[0,0] = s
 
     # Initialize tree parameters 
@@ -92,34 +41,68 @@ def crr_tree(s, k, r, T, t, v):
     d = 1/u
     p = (math.exp(r*dt) - d)/(u - d)
 
-    # print the stock price tree
-    #printing the 2D-Array
+    # Fill in top branch 
+    for col in range(1,t):
+        crrTree[0, col] = crrTree[0, col-1]*u
     
-    print("\nCRR Stock Price Tree:\n")
-    for i in crrTree:
-        for j in i:
-            print(j, end=" ")
-        print() 
-    print("\n")
+    for row in range(1, t):
+        for col in range(row, t):
+            crrTree[row, col] = crrTree[row-1, col-1]*d
+    
+    # European option payoff 
+    
+    lastCol = len(crrPrice)-1
 
+    for row in range(0,lastCol+1):
+        crrPrice[row, lastCol] =  max(crrTree[row, lastCol] - k, 0)
+
+    discount = math.exp(-r*dt) 
+
+    for col in range(lastCol-1, -1, -1):
+        for row in range(0, col+1):
+            # move backwards from previous prices 
+            Pu = crrPrice[row, col+1]
+            Pd = crrPrice[row+1, col+1]
+            # Calcuate price on tree
+            crrPrice[row, col] = discount*(p*Pu + (1-p)*Pd)
+
+    
+    return crrPrice[0,0]
+
+
+    # Testing code 
+    # print(u)
+    # print(d)
+    # print(p)
+
+    # print the stock price tree    
+    # print("\nCRR Stock Price Tree:\n")
+    # for i in crrTree:
+    #     for j in i:
+    #         print("{:3.2f}".format(j), end=" ")
+    #     print() 
+    # print("\n")
+
+    # # print the stock price tree    
+    # print("\nCRR Option Price Tree:\n")
+    # for i in crrPrice:
+    #     for j in i:
+    #         print("{:3.2f}".format(j), end=" ")
+    #     print() 
+    # print("\n")
 
 # Testing 
-crr_tree(65, 65, 0.01, 5/12, 10, 0.450)
 
-# testing
+# Monster Beverage Call Option 
+price = crr_tree(91.36, 95.00, 0.007, 2.5/12, 100, 0.2753)
+print("--------------------------------------------------------------")
+print("Monster Beverage Corp.")
+print("Expiry: June 18th")
+print("European Call Price: $" + "{:3.2f}".format(price))
 
-"""# European Calls and Puts
-
-## Binomial Tree Pricing 
-
-For review, a European call option is a derivative contract that gives a buyer the right, but not the obligation, to purchase an asset for a specified price $k$ at a future date in time. This purchase price is commonly referred to as the **strike price.** The formula for the payoff of a European call at maturity is:
-
-$\hspace{1.5em} Call: \: (S_T - k, 0)^+$
-
-$\hspace{1.5em} Put: \:  (k - S_T, 0)^+$
-
-Above the $(...)^+$ is used to represent the $max(...)$ function, which is common in financial literature. 
-
-Once a binomial CRR is generated, the following iterative formula can be implemented to price a European call:
-"""
-
+price = crr_tree(265.32, 267.50, 0.0007, 0.217/12, 50, 0.5620)
+print("--------------------------------------------------------------")
+print("Carvana Co.")
+print("Expiry: April 9th")
+print("European Call Price: $" + "{:3.2f}".format(price))
+print("--------------------------------------------------------------")
