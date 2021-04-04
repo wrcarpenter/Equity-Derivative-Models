@@ -18,3 +18,5 @@ def black_scholes(S, K, r, T, t, v, x):
     d2 = d1 - v*math.sqrt(T)
 
     return x*S*norm.cdf(d1) - x*K*math.exp(-r*T)*norm.cdf(d2)
+
+
