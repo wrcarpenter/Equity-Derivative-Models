@@ -12,6 +12,8 @@ Pricing: European calls/puts, American calls/puts, barrier options.
 
 More granular comparison to Black-Scholes with graphs. 
 
+Final price distributions for binomial and trinomial trees.
+
 American options (calls/puts). 
 
 Spread options. (two different trees with comparison of prices.).
