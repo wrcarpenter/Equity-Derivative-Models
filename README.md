@@ -6,3 +6,14 @@ Binomial and Trinomial tree implementations of the acclaimed CRR model. Comparis
 closed-form solution.
 
 Pricing: European calls/puts, American calls/puts, barrier options. 
+
+
+# To Add
+
+More granular comparison to Black-Scholes with graphs. 
+
+American options (calls/puts). 
+
+Barrier options.
+
+Asian options with monte carlo simulation of CRR (add some graphs as well). 
