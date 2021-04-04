@@ -14,6 +14,8 @@ More granular comparison to Black-Scholes with graphs.
 
 American options (calls/puts). 
 
+Spread options. (two different trees with comparison of prices.).
+
 Barrier options.
 
-Asian options with monte carlo simulation of CRR (add some graphs as well). 
+Asian options with monte carlo simulation of CRR (add some graphs as well). Lookback options with Monte Carlo.
