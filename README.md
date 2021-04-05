@@ -8,6 +8,10 @@ closed-form solution.
 Pricing: European calls/puts, American calls/puts, barrier options. 
 
 
+# Data 
+
+Historical stock price data acquired from Yahoo Finance. This can be utilized to calculate volatility.
+
 # To Add
 
 More granular comparison to Black-Scholes with graphs. 
