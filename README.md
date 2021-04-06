@@ -10,7 +10,7 @@ Pricing: European calls/puts, American calls/puts, barrier options.
 
 ## Jarrow-Rudd Model 
 
-An version of the CRR binomial model with p=1/2. 
+A version of the CRR binomial model with p=1/2. 
 
 # Data 
 
