@@ -8,6 +8,10 @@ closed-form solution.
 Pricing: European calls/puts, American calls/puts, barrier options. 
 
 
+## Jarrow-Rudd Model 
+
+An version of the CRR binomial model with p=1/2. 
+
 # Data 
 
 Historical stock price data acquired from Yahoo Finance. This can be utilized to calculate volatility.
