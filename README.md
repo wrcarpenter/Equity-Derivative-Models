@@ -12,6 +12,8 @@ Pricing: European calls/puts, American calls/puts, barrier options.
 
 Historical stock price data acquired from Yahoo Finance. This can be utilized to calculate volatility.
 
+Continuously compounding riskless interest rates can be acquired from on-the-run Treasury data via interpolatoin and bootstrapping. 
+
 # To Add
 
 More granular comparison to Black-Scholes with graphs. 
