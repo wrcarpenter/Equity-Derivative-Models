@@ -18,6 +18,8 @@ Historical stock price data acquired from Yahoo Finance. This can be utilized to
 
 Continuously compounding riskless interest rates can be acquired from on-the-run Treasury data via interpolatoin and bootstrapping. 
 
+![cir1](https://user-images.githubusercontent.com/65867547/113967496-19309100-97ff-11eb-8e9d-8fbf758018b1.PNG)
+
 # To Add
 
 More granular comparison to Black-Scholes with graphs. 
