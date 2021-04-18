@@ -31,3 +31,7 @@ Spread options. (two different trees with comparison of prices.).
 Barrier options.
 
 Asian options with monte carlo simulation of CRR (add some graphs as well). Lookback options with Monte Carlo.
+
+```python
+crr_build_tree(r, K, S, t)
+```
