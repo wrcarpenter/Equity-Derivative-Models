@@ -33,5 +33,13 @@ Barrier options.
 Asian options with monte carlo simulation of CRR (add some graphs as well). Lookback options with Monte Carlo.
 
 ```python
-crr_build_tree(r, K, S, t)
+crr_build_tree(r, K, S, t, T, vol, call, american)
 ```
+Where we would have:
+* r : risk free rate 
+* K : strike price 
+* S : underlying price 
+* t : time increment
+* vol : annualized volatility
+* call : call (=1) or put (=0)
+* american : European (=0) or American (=1)
