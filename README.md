@@ -5,8 +5,18 @@
 Binomial and Trinomial tree implementations of the acclaimed CRR model. Comparison to the Black-Scholes equation is included to see how the tree method performs relative to a
 closed-form solution.
 
-Pricing: European calls/puts, American calls/puts, barrier options. 
-
+```python
+crr_build_tree(S, K, r, t, T, vol, call, american)
+```
+Where the arguments are:
+* S : underlying price
+* K : strike price 
+* r : risk-less short rate 
+* t : number of periods 
+* T : option time-to-maturity (in yrs.)
+* vol : annualized volatility
+* call : 'call' or 'put' (string argument)
+* american : European (=0) or American (=1)
 
 ## Jarrow-Rudd Model 
 
