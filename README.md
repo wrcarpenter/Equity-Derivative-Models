@@ -37,7 +37,7 @@ A more rigorous continuously compounding riskless interest rates can be acquired
 See below for the options data on equities implemented within this projects notebooks for the CRR and JR models: 
 
 **American Airlines** 
-* https://finance.yahoo.com/quote/AAL/options/
+* [options chain](https://finance.yahoo.com/quote/AAL/options/)
 * International airline 
 
 **Norwegian Cruise Line**
