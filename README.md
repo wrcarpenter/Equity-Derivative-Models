@@ -18,7 +18,7 @@ Historical stock price data acquired from Yahoo Finance. This can be utilized to
 
 A more rigorous continuously compounding riskless interest rates can be acquired from on-the-run Treasury data via interpolatoin and bootstrapping. 
 
-##Examples 
+## Options Chain Examples 
 
 Carvana 
 * https://finance.yahoo.com/quote/CVNA/options/
