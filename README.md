@@ -20,8 +20,8 @@ A more rigorous continuously compounding riskless interest rates can be acquired
 
 ## Options Chain Examples 
 
-Carvana 
-* https://finance.yahoo.com/quote/CVNA/options/
+**Carvana**: https://finance.yahoo.com/quote/CVNA/options/
+* Online used car retailer based in Tempe, Arizona.
 
 American Airlines 
 * https://finance.yahoo.com/quote/AAL/options/
