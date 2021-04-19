@@ -1,4 +1,6 @@
-# **EQUITY OPTION MODELS**
+# **EQUITY DERIVATIVE MODELS**
+
+Lattice and Monte Carlo based models to price a variety of equity derivatives. 
 
 ## Cox Ross Rubenstein (CRR) Model
 
