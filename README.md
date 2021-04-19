@@ -34,6 +34,8 @@ A more rigorous continuously compounding riskless interest rates can be acquired
 
 ## Options Chain Examples 
 
+See below for the options data on equities implemented within this projects notebooks for the CRR and JR models: 
+
 **Carvana** 
 * https://finance.yahoo.com/quote/CVNA/options/
 * Online used car retailer based in Tempe, Arizona.
