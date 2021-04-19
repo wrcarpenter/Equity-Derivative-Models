@@ -36,29 +36,34 @@ A more rigorous continuously compounding riskless interest rates can be acquired
 
 See below for the options data on equities implemented within this projects notebooks for the CRR and JR models: 
 
+**American Airlines** 
+* https://finance.yahoo.com/quote/AAL/options/
+* International airline 
+
+**Norwegian Cruise Line**
+* https://finance.yahoo.com/quote/NCLH/options/
+* International cruise line 
+
+**Newmont Corporation** 
+* https://finance.yahoo.com/quote/NEM/options/
+* World's largest gold mining company
+
+**Lithium Americas Corp**
+* https://finance.yahoo.com/quote/LAC/options/
+* Canadian Lithium mining company 
+
+**Mcdonald's Corp**
+* https://finance.yahoo.com/quote/MCD/options/
+* American fast-food company 
+
+**Coca-Cola Consolidated Inc**
+* https://finance.yahoo.com/quote/KO/options/
+* Soda beverage manufacturer
+
 **Carvana** 
 * https://finance.yahoo.com/quote/CVNA/options/
 * Online used car retailer based in Tempe, Arizona.
 
-American Airlines 
-* https://finance.yahoo.com/quote/AAL/options/
-* International airline 
-
-Norwegian Cruise Line
-* https://finance.yahoo.com/quote/NCLH/options
-* International cruise line 
-
-Newmont Corporation 
-* https://finance.yahoo.com/quote/NEM/options/
-* World's largest gold mining company
-
-Lithium Americas Corp
-* https://finance.yahoo.com/quote/LAC/options/
-* Canadian Lithium mining company 
-
-Mcdonald's Corp
-* https://finance.yahoo.com/quote/MCD/options/
-* American fast-food company 
 
 # To Add
 
