@@ -26,6 +26,10 @@ A version of the CRR binomial model with p=1/2.
 
 Historical stock price data acquired from Yahoo Finance. This can be utilized to calculate volatility. Riskless interest rates can be obtained from T-bill yields (under one year).
 
+## Yahoo Finance Data 
+Equity historical prices and option chains (including implied volatilties):
+* https://finance.yahoo.com/
+
 A more rigorous continuously compounding riskless interest rates can be acquired from on-the-run Treasury data via interpolatoin and bootstrapping. 
 
 ## Options Chain Examples 
