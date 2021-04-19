@@ -6,7 +6,7 @@ Binomial and Trinomial tree implementations of the acclaimed CRR model. Comparis
 closed-form solution.
 
 ```python
-crr_build_tree(S, K, r, t, T, vol, call, american)
+def crr_build_tree(S, K, r, t, T, vol, call, american)
 ```
 Where the arguments are:
 * S : underlying price
