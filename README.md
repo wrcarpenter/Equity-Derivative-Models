@@ -56,6 +56,10 @@ Lithium Americas Corp
 * https://finance.yahoo.com/quote/LAC/options/
 * Canadian Lithium mining company 
 
+Mcdonald's Corp
+* https://finance.yahoo.com/quote/MCD/options/
+* American fast-food company 
+
 # To Add
 
 More granular comparison to Black-Scholes with graphs. 
