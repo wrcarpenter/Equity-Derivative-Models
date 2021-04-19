@@ -10,7 +10,7 @@ closed-form solution.
 ### The Binomial Model 
 
 ```python
-def crr_build_tree(S, K, r, t, T, vol, call, american)
+def crr_binomial_tree(S, K, r, t, T, vol, call, american)
 ```
 Where the arguments are:
 * S : underlying price
@@ -23,6 +23,11 @@ Where the arguments are:
 * american : European (=0) or American (=1)
 
 ### The Trinomial Model 
+```python
+def crr_trinomial_tree(S, K, r, t, T, vol, call, american)
+```
+Notice here that the function name is *trinomial* rather than binomial. Function arguments remain the same as in the binomial model (see previous section). 
+
 
 ### Visualizing CRR Trees
 
