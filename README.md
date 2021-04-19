@@ -36,6 +36,11 @@ A more rigorous continuously compounding riskless interest rates can be acquired
 
 See below for the options data on equities implemented within this projects notebooks for the CRR and JR models: 
 
+| Company | Ticker |  Options Chain  | Historical Prices | 
+| --- | --- | --- | --- |
+| `git status` | List all *new or modified* files | |  |
+| `git diff` | Show file differences that **haven't been** staged | | | 
+
 **American Airlines** 
 * [options chain](https://finance.yahoo.com/quote/AAL/options/)
 * International airline 
