@@ -17,14 +17,14 @@ closed-form solution.
 def crr_binomial_tree(S, K, r, t, T, v, type, style)
 ```
 Where the arguments are:
-* S : underlying price
-* K : strike price 
-* r : risk-less short rate 
-* t : number of periods 
-* T : option time-to-maturity (in yrs.)
-* v : annualized volatility
-* type : 'call' or 'put' (string argument)
-* style : 'euro' or 'amer' (string argument)
+* S     : underlying price
+* K     : strike price 
+* r     : risk-less short rate 
+* t     : number of periods 
+* T     : option time-to-maturity (in yrs.)
+* v     : annualized volatility
+* otype : 'call' or 'put' option type (string argument)
+* style : 'euro' or 'amer' option style (string argument)
 
 ### The Trinomial Model 
 ```python
@@ -50,6 +50,7 @@ This section is dedicated to dicussing different derivative payoffs.
 ```python 
 # European Call
 max(S - K, 0)
+
 # European Put
 max(K - S, 0) 
 ```
@@ -60,9 +61,9 @@ Because of the symmetry of these payoffs, more compact code can be used that han
 
 # User-defined argument for type of option 
 if otype=='call': x = 1 
-if otype=='put; : x = -1 
+if otype=='put'; : x = -1 
 
-# Option payoff 
+# Option payoff function 
 max(x*S - x*K, 0)
 ```
 It is easy to see that inputting an agrument to define a variable 'x' will accomodate both types of option payoffs. 
@@ -73,10 +74,10 @@ It is easy to see that inputting an agrument to define a variable 'x' will accom
 Historical stock price data acquired from Yahoo Finance. This can be utilized to calculate volatility. Riskless interest rates can be obtained from T-bill yields (under one year).
 
 ## Yahoo Finance Data 
-Equity historical prices and option chains (including implied volatilties):
-* https://finance.yahoo.com/
+[Yahoo Finance](https://finance.yahoo.com/) is an excellent source for historical equity prices and option chains, which include implied volatilties (presumably from inverting Black Scholes.
 
-A more rigorous continuously compounding riskless interest rates can be acquired from on-the-run Treasury data via interpolatoin and bootstrapping. 
+## Riskless Rates Data 
+The [Treasury](https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/textview.aspx?data=yield) provides data on daily Treasury yield curve interest rates. 
 
 ## Options Chain Examples 
 
