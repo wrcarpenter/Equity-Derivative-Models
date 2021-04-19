@@ -1,4 +1,6 @@
-# Cox Ross Rubenstein (CRR) Model
+# **EQUITY OPTION MODELS**
+
+## Cox Ross Rubenstein (CRR) Model
 
 ***INCOMPLETE and PRELIMINARY***
 
@@ -18,7 +20,7 @@ Where the arguments are:
 * call : 'call' or 'put' (string argument)
 * american : European (=0) or American (=1)
 
-## Jarrow-Rudd Model 
+## Jarrow-Rudd  Model 
 
 A version of the CRR binomial model with p=1/2. 
 
@@ -37,40 +39,17 @@ A more rigorous continuously compounding riskless interest rates can be acquired
 See below for the options data on equities implemented within this projects notebooks for the CRR and JR models: 
 
 | Company | Ticker | Industry |  Options Chain  | Historical Stock Price Data | 
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | American Airlines | `AAL` | Aviation |  [options](https://finance.yahoo.com/quote/AAL/options/)  |  [price data](https://finance.yahoo.com/quote/AAL/history?p=AAL) |
 | Norweigian Cruise Line | `NCLH` | Cruise lines | | |
-| Newmont Corporatoin | `NCLH` | Gold mining | | |
+| Newmont Corporation | `NCLH` | Gold mining | | |
 | Lithium Americas Corp. | `ticker` | Lithium mining | | |
-
-**American Airlines** 
-* [options chain](https://finance.yahoo.com/quote/AAL/options/)
-* International airline 
-
-**Norwegian Cruise Line**
-* https://finance.yahoo.com/quote/NCLH/options/
-* International cruise line 
-
-**Newmont Corporation** 
-* https://finance.yahoo.com/quote/NEM/options/
-* World's largest gold mining company
-
-**Lithium Americas Corp**
-* https://finance.yahoo.com/quote/LAC/options/
-* Canadian Lithium mining company 
-
-**Mcdonald's Corp**
-* https://finance.yahoo.com/quote/MCD/options/
-* American fast-food company 
-
-**Coca-Cola Consolidated Inc**
-* https://finance.yahoo.com/quote/KO/options/
-* Soda beverage manufacturer
-
-**Carvana** 
-* https://finance.yahoo.com/quote/CVNA/options/
-* Online used car retailer based in Tempe, Arizona.
-
+| McDonald's Corp. | `ticker` | Fast-food | | |
+| Coca-Cola Corp. | `ticker` | Food & Beverage | | |
+| Carvana | `ticker` | Auto retail | | |
+| Credit Acceptance Corp. | `CACC` | Auto finance | | |
+| Banco Santander | `SAN` | Retail banking | | |
+| Simon Property Group | `SPG` | Real estate| | |
 
 # To Add
 
@@ -86,14 +65,4 @@ Barrier options.
 
 Asian options with monte carlo simulation of CRR (add some graphs as well). Lookback options with Monte Carlo.
 
-```python
-crr_build_tree(r, K, S, t, T, vol, call, american)
-```
-Where we would have:
-* r : risk free rate 
-* K : strike price 
-* S : underlying price 
-* t : time increment
-* vol : annualized volatility
-* call : call (=1) or put (=0)
 * american : European (=0) or American (=1)
