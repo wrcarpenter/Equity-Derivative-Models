@@ -1,6 +1,8 @@
 # **EQUITY DERIVATIVE MODELS**
 
-Lattice and Monte Carlo based models to price a variety of equity derivatives. 
+This repository implements lattice and Monte Carlo based models to price a variety of equity derivatives. Lattice methods refer specifically binomial and trinomial trees, which are most useful when considering American-style options.
+
+The folder labeled "Code" provides the raw program code for various pricing models, implemented in both Python and MATLAB. See the "Notebooks" folder for implementation and exhibition of all models. 
 
 ## Cox Ross Rubenstein (CRR) Model
 
@@ -12,7 +14,7 @@ closed-form solution.
 ### The Binomial Model 
 
 ```python
-def crr_binomial_tree(S, K, r, t, T, vol, call, american)
+def crr_binomial_tree(S, K, r, t, T, v, type, style)
 ```
 Where the arguments are:
 * S : underlying price
@@ -20,9 +22,9 @@ Where the arguments are:
 * r : risk-less short rate 
 * t : number of periods 
 * T : option time-to-maturity (in yrs.)
-* vol : annualized volatility
-* call : 'call' or 'put' (string argument)
-* american : European (=0) or American (=1)
+* v : annualized volatility
+* type : 'call' or 'put' (string argument)
+* style : 'euro' or 'amer' (string argument)
 
 ### The Trinomial Model 
 ```python
@@ -39,6 +41,32 @@ Notice here that the function name is *trinomial* rather than binomial. Function
 ### The Binomial Model
 
 A version of the CRR binomial model with p=1/2. 
+
+## Option Payoffs 
+This section is dedicated to dicussing different derivative payoffs. 
+
+### European Calls and Puts
+
+```python 
+# European Call
+max(S - K, 0)
+# European Put
+max(K - S, 0) 
+```
+Because of the symmetry of these payoffs, more compact code can be used that handles both types. Using a string function argument, a user can enter 'call' or 'put' that will implement the correct payoff.
+
+```python 
+# European call or put implementation
+
+# User-defined argument for type of option 
+if otype=='call': x = 1 
+if otype=='put; : x = -1 
+
+# Option payoff 
+max(x*S - x*K, 0)
+```
+It is easy to see that inputting an agrument to define a variable 'x' will accomodate both types of option payoffs. 
+
 
 # Data 
 
@@ -67,7 +95,8 @@ See below for the options data on equities implemented within this projects note
 | Banco Santander | `SAN` | Retail banking | | |
 | Simon Property Group | `SPG` | Real estate| | |
 
-# To Add
+
+## To Add
 
 More granular comparison to Black-Scholes with graphs. 
 
@@ -80,5 +109,3 @@ Spread options. (two different trees with comparison of prices.).
 Barrier options.
 
 Asian options with monte carlo simulation of CRR (add some graphs as well). Lookback options with Monte Carlo.
-
-* american : European (=0) or American (=1)
