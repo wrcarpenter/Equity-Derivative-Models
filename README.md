@@ -7,6 +7,8 @@
 Binomial and Trinomial tree implementations of the acclaimed CRR model. Comparison to the Black-Scholes equation is included to see how the tree method performs relative to a
 closed-form solution.
 
+### The Binomial Model 
+
 ```python
 def crr_build_tree(S, K, r, t, T, vol, call, american)
 ```
@@ -20,7 +22,14 @@ Where the arguments are:
 * call : 'call' or 'put' (string argument)
 * american : European (=0) or American (=1)
 
+### The Trinomial Model 
+
+### Visualizing CRR Trees
+
+
 ## Jarrow-Rudd  Model 
+
+### The Binomial Model
 
 A version of the CRR binomial model with p=1/2. 
 
