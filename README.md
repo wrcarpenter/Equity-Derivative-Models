@@ -44,7 +44,11 @@ Norwegian Cruise Line
 
 Newmont Corporation 
 * https://finance.yahoo.com/quote/NEM/options/
-* World's largest gold mining company 
+* World's largest gold mining company
+
+Lithium Americas Corp
+* https://finance.yahoo.com/quote/LAC/options/
+* Canadian Lithium mining company 
 
 # To Add
 
