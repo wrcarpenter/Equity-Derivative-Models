@@ -36,10 +36,12 @@ A more rigorous continuously compounding riskless interest rates can be acquired
 
 See below for the options data on equities implemented within this projects notebooks for the CRR and JR models: 
 
-| Company | Ticker |  Options Chain  | Historical Stock Price Data | 
+| Company | Ticker | Industry |  Options Chain  | Historical Stock Price Data | 
 | --- | --- | --- | --- |
-| American Airlines | `AAL` |  [options](https://finance.yahoo.com/quote/AAL/options/)  |  [price data](https://finance.yahoo.com/quote/AAL/history?p=AAL) |
-| Norweigian Cruise Line | `git diff` | | | 
+| American Airlines | `AAL` | Aviation |  [options](https://finance.yahoo.com/quote/AAL/options/)  |  [price data](https://finance.yahoo.com/quote/AAL/history?p=AAL) |
+| Norweigian Cruise Line | `NCLH` | Cruise lines | | |
+| Newmont Corporatoin | `NCLH` | Gold mining | | |
+| Lithium Americas Corp. | `ticker` | Lithium mining | | |
 
 **American Airlines** 
 * [options chain](https://finance.yahoo.com/quote/AAL/options/)
