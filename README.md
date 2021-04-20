@@ -113,7 +113,7 @@ See below for the options data on equities implemented within this projects note
 | Company | Ticker | Industry |  Options Chain  | Historical Stock Price Data | 
 | --- | --- | --- | --- | --- |
 | American Airlines | `AAL` | Aviation |  [options](https://finance.yahoo.com/quote/AAL/options/)  |  [price data](https://finance.yahoo.com/quote/AAL/history?p=AAL) |
-| Norwegian Cruise Line | `NCLH` | Cruise lines | [options](https://finance.yahoo.com/quote/NCLH/options/)| |
+| Norwegian Cruise Line | `NCLH` | Cruise lines | [options](https://finance.yahoo.com/quote/NCLH/options/)| [price data](https://finance.yahoo.com/quote/NCLH/history?p=NCLH) |
 | Newmont Corporation | `NEM` | Gold mining | [options]()| [price data](https://finance.yahoo.com/quote/NCLH/history?p=NCLH)|
 | Lithium Americas Corp. | `ticker` | Lithium mining | [options](https://finance.yahoo.com/quote/NEM/options?p=NEM) | [price data](https://finance.yahoo.com/quote/NEM/history?p=NEM) |
 | McDonald's Corp. | `ticker` | Fast-food | [options]() | [price data]() |
