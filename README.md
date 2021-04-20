@@ -6,7 +6,7 @@ The folder labeled "Code" provides the raw program code for various pricing mode
 
 ## Cox Ross Rubenstein (CRR) Model
 
-***INCOMPLETE and PRELIMINARY***
+The Cox-Ross-Rubenstein (CRR) model is one of the most well-known binomial option pricing schemes in finance.  
 
 Binomial and Trinomial tree implementations of the acclaimed CRR model. Comparison to the Black-Scholes equation is included to see how the tree method performs relative to a
 closed-form solution.
@@ -26,6 +26,21 @@ Where the arguments are:
 * otype : 'call' or 'put' option type (string argument)
 * style : 'euro' or 'amer' option style (string argument)
 
+#### Parameters
+Tree dynamics are governed by three parameters: probability (p), up-move (u), down-move (d). These arederived such that the tree dynamics converge to Black-Scholes as the time increment (t) becomes infinitely small. 
+```python
+#  v ~ volatility 
+# dt ~ time increment (T/t)
+
+# risk-neutral probability 
+p = (math.exp(r * dt) - d)/(u - d)
+# up
+u = math.exp(v * math.sqrt(dt))
+# down 
+d = 1 / u
+```
+
+
 ### The Trinomial Model 
 ```python
 def crr_trinomial_tree(S, K, r, t, T, vol, call, american)
@@ -40,7 +55,20 @@ Notice here that the function name is *trinomial* rather than binomial. Function
 
 ### The Binomial Model
 
-A version of the CRR binomial model with p=1/2. 
+A particular adaptation of the CRR binomial model where it is assumed that the risk neutral probability is equal for the up and down states (p=1/2). This assumption generates the following parameters to govern tree dymamics:
+
+#### Parameters
+```python
+#  v ~ volatility 
+# dt ~ time increment (T/t)
+
+# risk-neutral probability 
+p = 1/2
+# up
+u = math.exp(v * math.sqrt(dt))
+# down 
+d = 1 / u
+```
 
 ## Option Payoffs 
 This section is dedicated to dicussing different derivative payoffs. 
@@ -60,21 +88,20 @@ Because of the symmetry of these payoffs, more compact code can be used that han
 # European call or put implementation
 
 # User-defined argument for type of option 
-if otype=='call': x = 1 
-if otype=='put'; : x = -1 
+if otype=='call' : x = 1 
+if otype=='put'  : x = -1 
 
 # Option payoff function 
-max(x*S - x*K, 0)
+max(x * S - x * K, 0)
 ```
 It is easy to see that inputting an agrument to define a variable 'x' will accomodate both types of option payoffs. 
-
 
 # Data 
 
 Historical stock price data acquired from Yahoo Finance. This can be utilized to calculate volatility. Riskless interest rates can be obtained from T-bill yields (under one year).
 
 ## Yahoo Finance Data 
-[Yahoo Finance](https://finance.yahoo.com/) is an excellent source for historical equity prices and option chains, which include implied volatilties (presumably from inverting Black Scholes.
+[Yahoo Finance](https://finance.yahoo.com/) is an excellent source for historical equity prices and option chains, which include implied volatilties (presumably from inverting the Black-Scholes formula).
 
 ## Riskless Rates Data 
 The [Treasury](https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/textview.aspx?data=yield) provides data on daily Treasury yield curve interest rates. 
@@ -86,27 +113,29 @@ See below for the options data on equities implemented within this projects note
 | Company | Ticker | Industry |  Options Chain  | Historical Stock Price Data | 
 | --- | --- | --- | --- | --- |
 | American Airlines | `AAL` | Aviation |  [options](https://finance.yahoo.com/quote/AAL/options/)  |  [price data](https://finance.yahoo.com/quote/AAL/history?p=AAL) |
-| Norweigian Cruise Line | `NCLH` | Cruise lines | | |
-| Newmont Corporation | `NCLH` | Gold mining | | |
-| Lithium Americas Corp. | `ticker` | Lithium mining | | |
-| McDonald's Corp. | `ticker` | Fast-food | | |
-| Coca-Cola Corp. | `ticker` | Food & Beverage | | |
-| Carvana | `ticker` | Auto retail | | |
-| Credit Acceptance Corp. | `CACC` | Auto finance | | |
-| Banco Santander | `SAN` | Retail banking | | |
-| Simon Property Group | `SPG` | Real estate| | |
+| Norwegian Cruise Line | `NCLH` | Cruise lines | [options](https://finance.yahoo.com/quote/NCLH/options/)| |
+| Newmont Corporation | `NEM` | Gold mining | [options]()| [price data](https://finance.yahoo.com/quote/NCLH/history?p=NCLH)|
+| Lithium Americas Corp. | `ticker` | Lithium mining | [options](https://finance.yahoo.com/quote/NEM/options?p=NEM) | [price data](https://finance.yahoo.com/quote/NEM/history?p=NEM) |
+| McDonald's Corp. | `ticker` | Fast-food | [options]() | [price data]() |
+| Coca-Cola Corp. | `ticker` | Food & Beverage | [options]() | [price data]() |
+| Carvana | `ticker` | Auto retail | [options]() | [price data]() |
+| Credit Acceptance Corp. | `CACC` | Auto finance | [options]() | [price data]() |
+| Banco Santander | `SAN` | Retail banking | [options]() | [price data]() |
+| Simon Property Group | `SPG` | Real estate| [options]() | [price data]() |
 
 
 ## To Add
 
-More granular comparison to Black-Scholes with graphs. 
+* Invert Black-Scholes function 
 
-Final price distributions for binomial and trinomial trees.
+* More granular comparison to Black-Scholes with graphs. 
 
-American options (calls/puts). 
+* Final price distributions for binomial and trinomial trees.
 
-Spread options. (two different trees with comparison of prices.).
+* American options (calls/puts). 
 
-Barrier options.
+* Spread options. (two different trees with comparison of prices.).
 
-Asian options with monte carlo simulation of CRR (add some graphs as well). Lookback options with Monte Carlo.
+* Barrier options.
+
+* Asian options with monte carlo simulation of CRR (add some graphs as well). Lookback options with Monte Carlo.
