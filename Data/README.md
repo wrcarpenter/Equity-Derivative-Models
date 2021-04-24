@@ -24,3 +24,5 @@ See below for the options data on equities implemented within this projects note
 | Credit Acceptance Corp. | `CACC` | Auto finance | [options]() | [price data]() |
 | Banco Santander | `SAN` | Retail banking | [options]() | [price data]() |
 | Simon Property Group | `SPG` | Real estate| [options]() | [price data]() |
+| Pool Corp. | `SPG` | Real estate| [options]() | [price data]() |
+| Glencore | `SPG` | Real estate| [options]() | [price data]() |
