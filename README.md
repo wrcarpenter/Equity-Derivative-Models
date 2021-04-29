@@ -122,6 +122,8 @@ The [Treasury](https://www.treasury.gov/resource-center/data-chart-center/intere
 
 * Excel spreadsheets for tree testing and design
 
+* Calculate option delta, gamma, rho, etc.
+
 * Invert Black-Scholes function ~ ivol(...) 
 
 * More granular comparison to Black-Scholes with graphs. 
