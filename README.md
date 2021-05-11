@@ -120,7 +120,7 @@ The [Treasury](https://www.treasury.gov/resource-center/data-chart-center/intere
 
 ## To Add
 
-* Valuation is "fair" price, not "true" price. Fair is based on reasonable assumptions (log-normal distribution of returns, etc.) and current market dynamics (stock volatility, risk-free interest rate, etc.).
+* Valuation is "fair" price, not "true" price. Fair is based on reasonable assumptions (log-normal distribution of returns, etc.) and current market dynamics (stock volatility, risk-free interest rate, etc.). Without a crystal ball, it is impossible to know the true price for something. Uncertainty from the future always makes prices random variables.
 
 * Excel spreadsheets for tree testing and design
 
