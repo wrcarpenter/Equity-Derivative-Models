@@ -120,6 +120,8 @@ The [Treasury](https://www.treasury.gov/resource-center/data-chart-center/intere
 
 ## To Add
 
+* Valuation is "fair" price, not "true" price. Fair is based on reasonable assumptions (log-normal distribution of returns, etc.) and current market dynamics (stock volatility, risk-free interest rate, etc.).
+
 * Excel spreadsheets for tree testing and design
 
 * Quant education --> heston model clean explanation
