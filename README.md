@@ -122,6 +122,8 @@ The [Treasury](https://www.treasury.gov/resource-center/data-chart-center/intere
 
 * Valuation is "fair" price, not "true" price. Fair is based on reasonable assumptions (log-normal distribution of returns, etc.) and current market dynamics (stock volatility, risk-free interest rate, etc.). Without a crystal ball, it is impossible to know the true price for something. Uncertainty from the future always makes prices random variables.
 
+* simple "naked" option payoff tables (w/ bearish and bullish interpretations)
+
 * Excel spreadsheets for tree testing and design
 
 * Quant education --> heston model clean explanation
