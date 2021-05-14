@@ -26,3 +26,8 @@ See below for the options data on equities implemented within this projects note
 | Simon Property Group | `SPG` | Real estate| [options]() | [price data]() |
 | Pool Corp. | `SPG` | Real estate| [options]() | [price data]() |
 | Glencore | `SPG` | Real estate| [options]() | [price data]() |
+| Nordic American Tanker | `NAT` | Real estate| [options]() | [price data]() |
+
+
+
+
