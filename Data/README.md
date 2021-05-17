@@ -12,21 +12,21 @@ The [Treasury](https://www.treasury.gov/resource-center/data-chart-center/intere
 
 See below for the options data on equities implemented within this projects notebooks for the CRR and JR models: 
 
-| Company | Ticker | Industry |  Options Chain  | Historical Stock Price Data | 
-| --- | --- | --- | --- | --- |
-| American Airlines | `AAL` | Aviation |  [options](https://finance.yahoo.com/quote/AAL/options/)  |  [price data](https://finance.yahoo.com/quote/AAL/history?p=AAL) |
-| Norwegian Cruise Line | `NCLH` | Cruise lines | [options](https://finance.yahoo.com/quote/NCLH/options/)| [price data](https://finance.yahoo.com/quote/NCLH/history?p=NCLH) |
-| Newmont Corporation | `NEM` | Gold mining | [options]()| [price data](https://finance.yahoo.com/quote/NCLH/history?p=NCLH)|
-| Lithium Americas Corp. | `ticker` | Lithium mining | [options](https://finance.yahoo.com/quote/NEM/options?p=NEM) | [price data](https://finance.yahoo.com/quote/NEM/history?p=NEM) |
-| McDonald's Corp. | `ticker` | Fast-food | [options]() | [price data]() |
-| Coca-Cola Corp. | `ticker` | Food & Beverage | [options]() | [price data]() |
-| Carvana | `ticker` | Auto retail | [options]() | [price data]() |
-| Credit Acceptance Corp. | `CACC` | Auto finance | [options]() | [price data]() |
-| Banco Santander | `SAN` | Retail banking | [options]() | [price data]() |
-| Simon Property Group | `SPG` | Real estate| [options]() | [price data]() |
-| Pool Corp. | `SPG` | Real estate| [options]() | [price data]() |
-| Glencore | `SPG` | Real estate| [options]() | [price data]() |
-| Nordic American Tanker | `NAT` | Real estate| [options]() | [price data]() |
+| Company | Ticker | Industry | 
+| --- | --- | --- |
+| American Airlines | `AAL` | Aviation | 
+| Norwegian Cruise Line | `NCLH` | Cruise lines | 
+| Newmont Corporation | `NEM` | Gold mining | 
+| Lithium Americas Corp. | `ticker` | Lithium mining | 
+| McDonald's Corp. | `ticker` | Fast-food | 
+| Coca-Cola Corp. | `ticker` | Food & Beverage | 
+| Carvana | `ticker` | Auto retail |
+| Credit Acceptance Corp. | `CACC` | Auto finance | 
+| Banco Santander | `SAN` | Retail banking | 
+| Simon Property Group | `SPG` | Real estate| 
+| Pool Corp. | `SPG` | Real estate| 
+| Glencore | `SPG` | Real estate| 
+| Nordic American Tanker | `NAT` | Shipping |
 
 
 
