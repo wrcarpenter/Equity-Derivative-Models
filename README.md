@@ -111,11 +111,11 @@ Historical stock price data acquired from Yahoo Finance. This can be utilized to
 [Yahoo Finance](https://finance.yahoo.com/) is an excellent source for historical equity prices and option chains, which include implied volatilties (presumably from inverting the Black-Scholes formula).
 
 ## Riskless Rates Data 
-The [Treasury](https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/textview.aspx?data=yield) provides data on daily Treasury yield curve interest rates. 
+The [US Treasury](https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/textview.aspx?data=yield) provides data on daily Treasury yield curve interest rates. These rates are considered to be the par-yields on 'constant-maturity' Treasury securities.  
 
 ## To Add
 
-* Valuation is "fair" price, not "true" price. Fair is based on reasonable assumptions (log-normal distribution of returns, etc.) and current market dynamics (stock volatility, risk-free interest rate, etc.). Without a crystal ball, it is impossible to know the true price for something. Uncertainty from the future always makes prices random variables.
+* Valuation is "fair" price given all available information, not "true" price for a security. Fair is based on reasonable assumptions (log-normal distribution of returns, etc.) and accurate analysis of current market dynamics (stock volatility, risk-free interest rate, etc.). Without a crystal ball, it is impossible to know the true price for something. Uncertainty from the future always makes prices random variables.
 
 * simple "naked" option payoff tables (w/ bearish and bullish interpretations)
 
