@@ -59,7 +59,7 @@ A particular adaptation of the CRR binomial model where it is assumed that the r
 
 #### Parameters
 ```python
-#  v ~ volatility 
+#  v ~ annualized volatility 
 # dt ~ time increment (T/t)
 
 # risk-neutral probability 
@@ -79,11 +79,6 @@ This section is dedicated to dicussing different derivative payoffs.
 | European | Call | `max(S(T) - K, 0)` |  null |
 | European | Put | `max(K - S(T), 0)` |  null |
 | American | Put | `max(S(t) - K, optionValue)` |  null |
-
-
-
-
-
 
 ### European Calls and Puts
 
