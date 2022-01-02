@@ -27,7 +27,5 @@ See below for the options data on equities implemented within this projects note
 | Pool Corp. | `SPG` | Real estate| 
 | Glencore | `SPG` | Real estate| 
 | Nordic American Tanker | `NAT` | Shipping |
-
-
-
+| NCR Corporation | `NCR` | Software |
 
