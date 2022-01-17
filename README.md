@@ -50,7 +50,6 @@ Notice here that the function name is *trinomial* rather than binomial. Function
 
 ### Visualizing CRR Trees
 
-
 ## Jarrow-Rudd  Model 
 
 ### The Binomial Model
@@ -107,15 +106,18 @@ It is easy to see that inputting an agrument to define a variable 'x' will accom
 
 Historical stock price data acquired from Yahoo Finance. This can be utilized to calculate volatility. Riskless interest rates can be obtained from T-bill yields (under one year).
 
-## Yahoo Finance Data 
+## Yahoo Finance 
 [Yahoo Finance](https://finance.yahoo.com/) is an excellent source for historical equity prices and option chains, which include implied volatilties (presumably from inverting the Black-Scholes formula).
 
-## Riskless Rates Data 
+## Google Finance
+[Google Finance](https://www.google.com/finance/) provides an API within its spreadsheet software (Google Sheets) to pull historical equity data.
+
+## Riskless Interest Rates 
 The [US Treasury](https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/textview.aspx?data=yield) provides data on daily Treasury yield curve interest rates. These rates are considered to be the par-yields on 'constant-maturity' Treasury securities.  
 
 ## To Add
 
-* Valuation is "fair" price given all available information, not "true" price for a security. Fair is based on reasonable assumptions (log-normal distribution of returns, etc.) and accurate analysis of current market dynamics (stock volatility, risk-free interest rate, etc.). Without a crystal ball, it is impossible to know the true price for something. Uncertainty from the future always makes prices random variables.
+* Valuation is "fair" price given all available information, not "true" price for a security. Fair is based on reasonable assumptions (log-normal distribution of returns, etc.) and accurate analysis of current market dynamics (stock volatility, risk-free interest rate, etc.). Without a crystal ball, it is impossible to know the true price for something. Uncertainty of the future always makes prices random variables, i.e. variables that can take on a range of values with associated probabilties.
 
 * simple "naked" option payoff tables (w/ bearish and bullish interpretations)
 
@@ -123,7 +125,7 @@ The [US Treasury](https://www.treasury.gov/resource-center/data-chart-center/int
 
 * Quant education --> heston model clean explanation
 
-* Calculate option vega, theta, delta, gamma.
+* Calculate option greeks: vega, theta, delta, gamma.
 
 * Invert Black-Scholes function ~ ivol(...) 
 
