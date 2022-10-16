@@ -1,4 +1,4 @@
-# **EQUITY DERIVATIVE MODELS**
+# **Equity Derivative Models**
 
 This repository implements lattice and Monte Carlo based models to price a variety of equity derivatives. Lattice methods refer specifically binomial and trinomial trees, which are most useful when considering American-style options.
 
