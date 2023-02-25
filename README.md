@@ -1,5 +1,7 @@
 # **Equity Derivative Models**
 
+Options are a must-know for any financial practioner, especially traders. They are quite prevalant outside of equities, in fixed income deratives and mortgaged-based securities. In fact, anyone who takes out of a mortgage has effectively bought an embedded option on rates!
+
 This repository implements lattice and Monte Carlo based models to price a variety of equity derivatives. Lattice methods refer specifically binomial and trinomial trees, which are most useful when considering American-style options.
 
 The folder labeled "Code" provides the raw program code for various pricing models, implemented in both Python and MATLAB. See the "Notebooks" folder for implementation and exhibition of all models. 
