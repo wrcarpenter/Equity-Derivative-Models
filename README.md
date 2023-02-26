@@ -77,9 +77,9 @@ This section is dedicated to dicussing different derivative payoffs.
 
 | Type | Style | Payoff |  Wiki  |
 | --- | --- | --- | --- |
-| European | Call | `max(S(T) - K, 0)` |  null |
-| European | Put | `max(K - S(T), 0)` |  null |
-| American | Put | `max(S(t) - K, optionValue)` |  null |
+| European | Call | $max(S(T) - K, 0)$ |  null |
+| European | Put | $max(K - S(T), 0)$ |  null |
+| American | Put | $max(S(t) - K, optionValue)$ |  null |
 
 ### European Calls and Puts
 
