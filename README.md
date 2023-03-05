@@ -19,12 +19,12 @@ closed-form solution.
 def crr_binomial_tree(S, K, r, t, T, v, type, style)
 ```
 Where the arguments are:
-* S     : underlying price
-* K     : strike price 
-* r     : risk-less short rate 
-* t     : number of periods 
-* T     : option time-to-maturity (in yrs.)
-* v     : annualized volatility
+* $S$     : underlying price
+* $K$     : strike price 
+* $r$     : risk-less short rate 
+* $t$     : number of periods 
+* $T$     : option time-to-maturity (in yrs.)
+* $v$     : annualized volatility $\sigma$
 * otype : 'call' or 'put' option type (string argument)
 * style : 'euro' or 'amer' option style (string argument)
 
