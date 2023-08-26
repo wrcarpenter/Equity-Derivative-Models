@@ -75,11 +75,11 @@ d = 1 / u
 This section is dedicated to dicussing different derivative payoffs. 
 
 
-| Type | Style | Payoff | 
-| --- | --- | --- | --- |
-| European | Call | $max(S(T) - K, 0)$ | 
-| European | Put | $max(K - S(T), 0)$ | 
-| American | Put | $max(S(t) - K, optionValue)$ | 
+| Type | Style | Payoff 
+| --- | --- | --- |
+| European | Call | $max(S(T) - K, 0)$ |
+| European | Put | $max(K - S(T), 0)$ |
+| American | Put | $max(S(t) - K, optionValue)$  
 
 ### European Calls and Puts
 
