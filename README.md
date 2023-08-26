@@ -71,15 +71,15 @@ u = math.exp(v * math.sqrt(dt))
 d = 1 / u
 ```
 
-## Option Payoffs 
+## Vanilla Option Payoffs 
 This section is dedicated to dicussing different derivative payoffs. 
 
 
-| Type | Style | Payoff |  Wiki  |
+| Type | Style | Payoff | 
 | --- | --- | --- | --- |
-| European | Call | $max(S(T) - K, 0)$ |  null |
-| European | Put | $max(K - S(T), 0)$ |  null |
-| American | Put | $max(S(t) - K, optionValue)$ |  null |
+| European | Call | $max(S(T) - K, 0)$ | 
+| European | Put | $max(K - S(T), 0)$ | 
+| American | Put | $max(S(t) - K, optionValue)$ | 
 
 ### European Calls and Puts
 
@@ -103,6 +103,10 @@ if otype=='put'  : x = -1
 max(x * S - x * K, 0)
 ```
 It is easy to see that inputting an agrument to define a variable 'x' will accomodate both types of option payoffs. 
+
+## Exotic Option Types
+
+Asian Options, Barrier Options, Basket Options, Bermuda Options, Binary/Digital Options, Chooser Options, Compound Options, Extendible Options, Lookback options, Spread options, Range options
 
 # Data 
 
