@@ -4,7 +4,7 @@ Options are a must-know for any financial practioner, especially traders. They a
 
 This repository implements lattice and Monte Carlo based models to price a variety of equity derivatives. Lattice methods refer specifically binomial and trinomial trees, which are most useful when considering American-style options.
 
-The folder labeled "Code" provides the raw program code for various pricing models, implemented in both Python and MATLAB. See the "Notebooks" folder for implementation and exhibition of all models. 
+The folder labeled "Code" provides the raw program code for various pricing models, implemented in Python.
 
 ## Cox Ross Rubenstein (CRR) Model
 
